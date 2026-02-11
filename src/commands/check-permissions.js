@@ -46,7 +46,7 @@ function createCheckPermissionsCommand(logger) {
         logger.info('   If you don\'t see "Registrar", your plan might not');
         logger.info('   support domain registrant management via API.');
         logger.info('');
-        logger.info('📋 FOR cf-registrar TO WORK:');
+        logger.info('📋 FOR cloudflare-registrar TO WORK:');
         logger.info('   ');
         logger.info('   You need at least ONE of these:');
         logger.info('   ✓ Zone → Registrar (if available)');
@@ -63,7 +63,7 @@ function createCheckPermissionsCommand(logger) {
         logger.info('📖 TO VERIFY YOU HAVE THE RIGHT TOKEN:');
         logger.info('   ');
         logger.info('   1. Create a token with the permission(s) you found');
-        logger.info('   2. Run: cf-registrar login');
+        logger.info('   2. Run: cloudflare-registrar login');
         logger.info('   3. Paste the token');
         logger.info('   4. The tool will validate it works');
         logger.info('');

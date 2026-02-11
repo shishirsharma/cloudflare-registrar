@@ -9,7 +9,7 @@ function createStatusCommand(logger) {
     .action(async (domain, options) => {
       try {
         if (!configManager.isConfigured()) {
-          logger.error('Not configured. Run: cf-registrar login');
+          logger.error('Not configured. Run: cloudflare-registrar login');
           process.exit(1);
         }
 

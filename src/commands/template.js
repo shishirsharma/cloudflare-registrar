@@ -54,7 +54,7 @@ function createTemplateCommand(logger) {
 
             if (templateList.length === 0) {
               logger.warn('No templates saved');
-              logger.info('Create a template with: cf-registrar template save');
+              logger.info('Create a template with: cloudflare-registrar template save');
               return;
             }
 

@@ -9,7 +9,7 @@ const CONFIG_DIR = path.join(os.homedir(), '.cloudflare');
 class TemplateManager {
   constructor() {
     this.config = new Conf({
-      projectName: 'cf-registrar',
+      projectName: 'cloudflare-registrar',
       projectSuffix: '',
       cwd: CONFIG_DIR,
       configName: 'templates'

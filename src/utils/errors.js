@@ -69,7 +69,7 @@ function handleError(error, logger = null) {
     log.error(`❌ ${error.message}`);
   } else if (error instanceof AuthenticationError) {
     log.error(`❌ ${error.message}`);
-    log.error('Run: cf-registrar config init');
+    log.error('Run: cloudflare-registrar config init');
     log.error('Or create a token at: https://dash.cloudflare.com/profile/api-tokens');
   } else if (error instanceof RateLimitError) {
     log.error(`⏱️  ${error.message}`);

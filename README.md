@@ -28,7 +28,7 @@ npm install
 npm link
 ```
 
-The tool will be available as `cf-registrar` in your terminal.
+The tool will be available as `cloudflare-registrar` in your terminal.
 
 ## Quick Start
 
@@ -37,7 +37,7 @@ The tool will be available as `cf-registrar` in your terminal.
 The easiest way to set up your API token:
 
 ```bash
-cf-registrar login
+cloudflare-registrar login
 ```
 
 This command will:
@@ -57,18 +57,18 @@ The login command includes a **complete Cloudflare UI walkthrough** with:
 
 **Alternative (Manual Setup):**
 ```bash
-cf-registrar config init
+cloudflare-registrar config init
 ```
 
 **Verify Configuration:**
 ```bash
-cf-registrar config show
+cloudflare-registrar config show
 ```
 
 ### 2. List Your Domains
 
 ```bash
-cf-registrar list
+cloudflare-registrar list
 ```
 
 Output example:
@@ -83,34 +83,34 @@ another.com                Jane Smith              jane@example.com           20
 
 Interactive mode:
 ```bash
-cf-registrar update example.com
+cloudflare-registrar update example.com
 ```
 
 Using a template:
 ```bash
-cf-registrar update example.com --template personal
+cloudflare-registrar update example.com --template personal
 ```
 
 ### 4. Manage Templates
 
 Save a template:
 ```bash
-cf-registrar template save personal
+cloudflare-registrar template save personal
 ```
 
 List all templates:
 ```bash
-cf-registrar template list
+cloudflare-registrar template list
 ```
 
 Load a template:
 ```bash
-cf-registrar template load personal
+cloudflare-registrar template load personal
 ```
 
 Delete a template:
 ```bash
-cf-registrar template delete personal
+cloudflare-registrar template delete personal
 ```
 
 ## Commands Reference
@@ -120,8 +120,8 @@ cf-registrar template delete personal
 Authenticate with Cloudflare and manage API token.
 
 ```bash
-cf-registrar login         # Interactive login with browser support
-cf-registrar auth         # Alias for login
+cloudflare-registrar login         # Interactive login with browser support
+cloudflare-registrar auth         # Alias for login
 ```
 
 Features:
@@ -137,9 +137,9 @@ This is the recommended way to authenticate.
 Manage Cloudflare API configuration.
 
 ```bash
-cf-registrar config init       # Setup API token with verification
-cf-registrar config show       # Display current configuration (token redacted)
-cf-registrar config reset      # Clear all configuration
+cloudflare-registrar config init       # Setup API token with verification
+cloudflare-registrar config show       # Display current configuration (token redacted)
+cloudflare-registrar config reset      # Clear all configuration
 ```
 
 ### list
@@ -147,9 +147,9 @@ cf-registrar config reset      # Clear all configuration
 List all domains with registrant information.
 
 ```bash
-cf-registrar list              # Table format
-cf-registrar list --json       # JSON format
-cf-registrar list --filter pattern  # Filter domains
+cloudflare-registrar list              # Table format
+cloudflare-registrar list --json       # JSON format
+cloudflare-registrar list --filter pattern  # Filter domains
 ```
 
 **Options:**
@@ -158,9 +158,9 @@ cf-registrar list --filter pattern  # Filter domains
 
 **Examples:**
 ```bash
-cf-registrar list
-cf-registrar list --json
-cf-registrar list --filter "^prod-"
+cloudflare-registrar list
+cloudflare-registrar list --json
+cloudflare-registrar list --filter "^prod-"
 ```
 
 ### update
@@ -168,9 +168,9 @@ cf-registrar list --filter "^prod-"
 Update a single domain's registrant contact.
 
 ```bash
-cf-registrar update <domain>
-cf-registrar update <domain> --template <name>
-cf-registrar update <domain> --interactive
+cloudflare-registrar update <domain>
+cloudflare-registrar update <domain> --template <name>
+cloudflare-registrar update <domain> --interactive
 ```
 
 **Options:**
@@ -180,10 +180,10 @@ cf-registrar update <domain> --interactive
 
 **Examples:**
 ```bash
-cf-registrar update example.com
-cf-registrar update example.com --template personal
-cf-registrar update example.com --interactive
-cf-registrar update example.com --template business --json
+cloudflare-registrar update example.com
+cloudflare-registrar update example.com --template personal
+cloudflare-registrar update example.com --interactive
+cloudflare-registrar update example.com --template business --json
 ```
 
 ### bulk-update
@@ -191,8 +191,8 @@ cf-registrar update example.com --template business --json
 Bulk update multiple domains' registrant contact.
 
 ```bash
-cf-registrar bulk-update --domains <file> --template <name>
-cf-registrar bulk-update --domains <file> --template <name> --dry-run
+cloudflare-registrar bulk-update --domains <file> --template <name>
+cloudflare-registrar bulk-update --domains <file> --template <name> --dry-run
 ```
 
 **Options:**
@@ -219,13 +219,13 @@ JSON:
 **Examples:**
 ```bash
 # Interactive selection with dry-run
-cf-registrar bulk-update --template personal --dry-run
+cloudflare-registrar bulk-update --template personal --dry-run
 
 # From file with template
-cf-registrar bulk-update --domains domains.txt --template business
+cloudflare-registrar bulk-update --domains domains.txt --template business
 
 # JSON output
-cf-registrar bulk-update --domains domains.json --template personal --json
+cloudflare-registrar bulk-update --domains domains.json --template personal --json
 ```
 
 ### template
@@ -233,18 +233,18 @@ cf-registrar bulk-update --domains domains.json --template personal --json
 Manage contact templates.
 
 ```bash
-cf-registrar template save <name>    # Create new template
-cf-registrar template list           # List all templates
-cf-registrar template load <name>    # Display template
-cf-registrar template delete <name>  # Delete template
+cloudflare-registrar template save <name>    # Create new template
+cloudflare-registrar template list           # List all templates
+cloudflare-registrar template load <name>    # Display template
+cloudflare-registrar template delete <name>  # Delete template
 ```
 
 **Examples:**
 ```bash
-cf-registrar template save personal
-cf-registrar template list
-cf-registrar template load personal
-cf-registrar template delete personal
+cloudflare-registrar template save personal
+cloudflare-registrar template list
+cloudflare-registrar template load personal
+cloudflare-registrar template delete personal
 ```
 
 ## Contact Information Format
@@ -283,9 +283,9 @@ Phone numbers must be in E.164 format (international format):
 Available with all commands:
 
 ```bash
-cf-registrar --verbose [command]  # Enable debug output
-cf-registrar --no-color [command] # Disable colored output
-cf-registrar --json [command]     # Output as JSON (where supported)
+cloudflare-registrar --verbose [command]  # Enable debug output
+cloudflare-registrar --no-color [command] # Disable colored output
+cloudflare-registrar --json [command]     # Output as JSON (where supported)
 ```
 
 ## Configuration
@@ -308,11 +308,11 @@ Templates are stored at `~/.cloudflare/templates.json`.
 
 The tool provides helpful error messages for common issues:
 
-### "Not configured. Run: cf-registrar config init"
+### "Not configured. Run: cloudflare-registrar config init"
 Your API token is not configured. Run the setup command.
 
 ### "Authentication failed"
-Your API token is invalid or expired. Run `cf-registrar config init` to update.
+Your API token is invalid or expired. Run `cloudflare-registrar config init` to update.
 
 ### "Rate limited. Retry after X seconds"
 The Cloudflare API is rate limiting. The tool automatically retries with exponential backoff.
@@ -328,7 +328,7 @@ The domain doesn't exist in your Cloudflare account or you don't have access to 
 ### Example 0: Authenticate with Cloudflare
 
 ```bash
-$ cf-registrar login
+$ cloudflare-registrar login
 ```
 
 The tool will:
@@ -341,7 +341,7 @@ The tool will:
 ### Example 1: Create a personal contact template
 
 ```bash
-$ cf-registrar template save personal
+$ cloudflare-registrar template save personal
 ```
 
 The tool will interactively prompt you to enter:
@@ -358,7 +358,7 @@ The tool will interactively prompt you to enter:
 ### Example 2: Update a single domain
 
 ```bash
-$ cf-registrar update example.com --template personal
+$ cloudflare-registrar update example.com --template personal
 ```
 
 The tool will:
@@ -379,20 +379,20 @@ third.com
 EOF
 
 # Preview the changes
-$ cf-registrar bulk-update --domains domains.txt --template personal --dry-run
+$ cloudflare-registrar bulk-update --domains domains.txt --template personal --dry-run
 
 # Apply the changes
-$ cf-registrar bulk-update --domains domains.txt --template personal
+$ cloudflare-registrar bulk-update --domains domains.txt --template personal
 ```
 
 ### Example 4: Filter and list domains
 
 ```bash
 # List all domains matching a pattern
-cf-registrar list --filter "^prod-"
+cloudflare-registrar list --filter "^prod-"
 
 # Output as JSON for processing
-cf-registrar list --json | jq '.[] | .name'
+cloudflare-registrar list --json | jq '.[] | .name'
 ```
 
 ## Troubleshooting
@@ -416,9 +416,9 @@ Create a new token at: https://dash.cloudflare.com/profile/api-tokens
 
 You can reset your configuration:
 ```bash
-cf-registrar config reset
+cloudflare-registrar config reset
 rm ~/.cloudflare/templates.json
-cf-registrar config init
+cloudflare-registrar config init
 ```
 
 ### Phone number validation failing

@@ -9,7 +9,7 @@ This document summarizes the successful implementation of the Cloudflare Domain 
 ```
 /home/shishir/src/cloudflare/
 ├── bin/
-│   └── cf-registrar.js          # CLI executable entry point
+│   └── cloudflare-registrar.js          # CLI executable entry point
 ├── src/
 │   ├── index.js                 # Main CLI setup (Commander.js)
 │   ├── commands/
@@ -44,7 +44,7 @@ This document summarizes the successful implementation of the Cloudflare Domain 
    - Interactive authentication with Cloudflare
    - Browser integration to open dashboard
    - Automatic token validation
-   - Alias: `cf-registrar auth`
+   - Alias: `cloudflare-registrar auth`
 
 2. **`config`**
    - `init`: Setup API token with verification
@@ -138,23 +138,23 @@ This document summarizes the successful implementation of the Cloudflare Domain 
 ```bash
 cd /home/shishir/src/cloudflare
 npm install
-npm link  # Make cf-registrar globally available
+npm link  # Make cloudflare-registrar globally available
 ```
 
 ### First Steps
 
 ```bash
 # Login with Cloudflare
-cf-registrar login
+cloudflare-registrar login
 
 # List your domains
-cf-registrar list
+cloudflare-registrar list
 
 # Create a contact template
-cf-registrar template save personal
+cloudflare-registrar template save personal
 
 # Update a domain
-cf-registrar update example.com --template personal
+cloudflare-registrar update example.com --template personal
 ```
 
 ## 🧪 Testing
@@ -162,13 +162,13 @@ cf-registrar update example.com --template personal
 ### Manual Testing Completed
 
 ✅ All commands are accessible and functioning:
-- `cf-registrar --help` - Shows all commands
-- `cf-registrar login --help` - Shows login options
-- `cf-registrar config show` - Displays configuration
-- `cf-registrar list` - Lists domains (requires API token)
-- `cf-registrar update test.com` - Updates domain (requires API token)
-- `cf-registrar template list` - Shows saved templates
-- `cf-registrar bulk-update --help` - Shows bulk options
+- `cloudflare-registrar --help` - Shows all commands
+- `cloudflare-registrar login --help` - Shows login options
+- `cloudflare-registrar config show` - Displays configuration
+- `cloudflare-registrar list` - Lists domains (requires API token)
+- `cloudflare-registrar update test.com` - Updates domain (requires API token)
+- `cloudflare-registrar template list` - Shows saved templates
+- `cloudflare-registrar bulk-update --help` - Shows bulk options
 
 ### Error Handling Verified
 
@@ -210,10 +210,10 @@ cf-registrar update example.com --template personal
 
 ### Login Command (New Feature)
 
-The login command (`cf-registrar login` or `cf-registrar auth`) provides:
+The login command (`cloudflare-registrar login` or `cloudflare-registrar auth`) provides:
 
 ```bash
-$ cf-registrar login
+$ cloudflare-registrar login
 
 Cloudflare API Token Setup
 ══════════════════════════════════════
@@ -233,7 +233,7 @@ Configuration saved to ~/.cloudflare/config.json
 You are now logged in!
 Next steps:
   View your domains:
-    cf-registrar list
+    cloudflare-registrar list
 ...
 ```
 
@@ -285,7 +285,7 @@ Next steps:
 User Command
     ↓
 Check Configuration
-    ├─ Not Configured → Suggest: cf-registrar login
+    ├─ Not Configured → Suggest: cloudflare-registrar login
     └─ OK → Continue
     ↓
 Make API Request
@@ -347,7 +347,7 @@ The Cloudflare Domain Registrant Contact CLI Tool is **fully implemented and rea
 - ✅ Comprehensive documentation
 - ✅ Professional error handling
 
-**Start using:** `cf-registrar login`
+**Start using:** `cloudflare-registrar login`
 
 ---
 

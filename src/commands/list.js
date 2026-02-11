@@ -14,7 +14,7 @@ function createListCommand(logger) {
       try {
         // Check if configured
         if (!configManager.isConfigured()) {
-          logger.error('Not configured. Run: cf-registrar config init');
+          logger.error('Not configured. Run: cloudflare-registrar config init');
           process.exit(1);
         }
 

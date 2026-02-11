@@ -64,7 +64,7 @@ function createConfigCommand(logger) {
 
             configManager.resetConfig();
             logger.success('Configuration reset');
-            logger.info('Run "cf-registrar login" to set up again');
+            logger.info('Run "cloudflare-registrar login" to set up again');
           } catch (error) {
             logger.error(error.message);
             process.exit(1);

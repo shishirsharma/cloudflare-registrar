@@ -1,6 +1,6 @@
 # Login Command Guide - Detailed Cloudflare UI Walkthrough
 
-## What You'll See When You Run `cf-registrar login`
+## What You'll See When You Run `cloudflare-registrar login`
 
 When you execute the login command, you'll see a detailed step-by-step guide:
 
@@ -29,7 +29,7 @@ When you execute the login command, you'll see a detailed step-by-step guide:
 ║     OR if "Edit domain registrar" template isn't available:             ║
 ║                                                                          ║
 ║     a) Create custom token with "Create Token" button                   ║
-║     b) Set token name (e.g., "cf-registrar")                            ║
+║     b) Set token name (e.g., "cloudflare-registrar")                            ║
 ║     c) Under PERMISSIONS section, click "Add more"                      ║
 ║     d) Add TWO permissions:                                             ║
 ║                                                                          ║
@@ -82,7 +82,7 @@ You'll see the token creation interface with:
 ### Step 3: Add Permissions
 
 **Set Token Name** (top of form)
-- Example: `cf-registrar`
+- Example: `cloudflare-registrar`
 
 **Add Zone Edit Permission** (required):
 
@@ -174,7 +174,7 @@ Press Enter. The tool validates the token and saves it!
 4. **Copy/paste corruption**
    - Some terminals modify pasted text
    - Try manually pasting character by character
-   - Or use: `cat | cf-registrar login`
+   - Or use: `cat | cloudflare-registrar login`
 
 ### ❌ Can't find "Create Token" button
 
@@ -204,7 +204,7 @@ Permission options vary significantly by Cloudflare account plan.
 
 4. Set Permission to "Edit"
 
-5. Add this permission and test with `cf-registrar login`
+5. Add this permission and test with `cloudflare-registrar login`
 
 **If you still can't find suitable permissions:**
 1. Check your Cloudflare plan - does it support domain registrations?
@@ -226,7 +226,7 @@ Permission options vary significantly by Cloudflare account plan.
 4. Create a NEW token
 5. Use the correct template or permissions
 6. Copy it immediately when it appears
-7. Come back to `cf-registrar login`
+7. Come back to `cloudflare-registrar login`
 
 ## After Successful Login
 
@@ -246,23 +246,23 @@ Permissions: Owner read/write only (0600)
 📝 What you can do next:
 
   List all your domains:
-    $ cf-registrar list
+    $ cloudflare-registrar list
 
   View a domain's registrant info:
-    $ cf-registrar list --filter example.com
+    $ cloudflare-registrar list --filter example.com
 
   Create a contact template (save time on updates):
-    $ cf-registrar template save personal
+    $ cloudflare-registrar template save personal
 
   Update a domain registrant:
-    $ cf-registrar update example.com --template personal
+    $ cloudflare-registrar update example.com --template personal
 
   Bulk update multiple domains:
-    $ cf-registrar bulk-update --domains domains.txt --template personal
+    $ cloudflare-registrar bulk-update --domains domains.txt --template personal
 
 Get help anytime:
-  $ cf-registrar --help
-  $ cf-registrar <command> --help
+  $ cloudflare-registrar --help
+  $ cloudflare-registrar <command> --help
 
 ╚════════════════════════════════════════════════════════════════════════╝
 ```
@@ -304,10 +304,10 @@ Your token is saved locally at:
 5. Verify your API token has the two required permissions
 
 Still stuck?
-- Run: `cf-registrar config show` to see your current config
-- Run: `cf-registrar config reset` to clear and start over
-- Run: `cf-registrar login` again to re-authenticate
+- Run: `cloudflare-registrar config show` to see your current config
+- Run: `cloudflare-registrar config reset` to clear and start over
+- Run: `cloudflare-registrar login` again to re-authenticate
 
 ---
 
-**That's it!** Once you've logged in with `cf-registrar login`, you're ready to manage your domain registrant contacts from the command line.
+**That's it!** Once you've logged in with `cloudflare-registrar login`, you're ready to manage your domain registrant contacts from the command line.

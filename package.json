@@ -1,14 +1,14 @@
 {
-  "name": "cf-registrar",
+  "name": "cloudflare-registrar",
   "version": "1.0.0",
   "description": "Cloudflare domain registrant contact CLI tool",
   "main": "src/index.js",
   "type": "commonjs",
   "bin": {
-    "cf-registrar": "./bin/cf-registrar.js"
+    "cloudflare-registrar": "./bin/cloudflare-registrar.js"
   },
   "scripts": {
-    "start": "node bin/cf-registrar.js",
+    "start": "node bin/cloudflare-registrar.js",
     "test": "jest",
     "lint": "eslint src bin"
   },
@@ -16,10 +16,17 @@
     "cloudflare",
     "registrar",
     "domain",
-    "cli"
+    "cli",
+    "registrant",
+    "contact",
+    "dns"
   ],
-  "author": "",
+  "author": "Shishir Khandelwal",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shishir/cloudflare-registrar.git"
+  },
   "engines": {
     "node": ">=14.0.0"
   },

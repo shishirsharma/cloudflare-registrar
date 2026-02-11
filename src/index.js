@@ -18,7 +18,7 @@ const program = new Command();
 
 // Global options
 program
-  .name('cf-registrar')
+  .name('cloudflare-registrar')
   .description('Cloudflare Domain Registrant Contact CLI Tool')
   .version('1.0.0')
   .option('-v, --verbose', 'Enable verbose output')
